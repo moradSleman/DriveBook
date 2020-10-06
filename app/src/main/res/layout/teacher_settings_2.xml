@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/logo"
+                android:background="@drawable/final_privacy" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:text="אבטחה והתחברות"
+                android:textColor="@color/black"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/closePrivacy"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:background="@drawable/leftarrow" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/sendCodeReg"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin"
+            android:visibility="visible"
+            android:layoutDirection="rtl"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="שינוי סיסמה"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputOldPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextOldPass"
+                    style="@style/modifiedEditText"
+                    android:hint="סיסמה נוכחית"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNewPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:theme="@style/TextInputLayoutStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNewPass"
+                    style="@style/modifiedEditText"
+                    android:hint="סיסמה חדשה"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNewRePass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNewRePass"
+                    style="@style/modifiedEditText"
+                    android:hint="הקלד שוב סיסמה חדשה"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/savePass"
+                android:layout_width="match_parent"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="שמור שינויים"
+                app:cornerRadius="20dp"
+                android:textColor="@color/whiteTextColor"
+                app:rippleColor="@color/whiteTextColor" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelPrivacy"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                app:cornerRadius="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="ביטול"
+                android:textColor="@color/colorAccent"
+                app:rippleColor="@color/colorAccent"
+                app:strokeColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

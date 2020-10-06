@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/logo"
+                android:background="@drawable/final_bell_noty" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:text="התראות"
+                android:textColor="@color/black"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/closeNotification"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:background="@drawable/leftarrow" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/sendCodeReg"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin"
+            android:visibility="visible"
+            android:layoutDirection="rtl"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layoutDirection="rtl">
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentStart="true"
+                   android:text="קבל התראות טקסט"
+                   android:textColor="@color/black"
+                   android:textSize="15dp" />
+
+               <com.google.android.material.switchmaterial.SwitchMaterial
+                   android:id="@+id/notificationsOK"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true" />
+           </RelativeLayout>
+
+
+            <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:orientation="horizontal"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:text="קבל התראות על"
+                android:layout_marginTop="20dp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textDirection="rtl"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:text="כל פעילות שינויים הנעשים על ידי המורה"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/teacherChangesNoty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:orientation="horizontal"/>
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textDirection="rtl"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:text="התראות תזכורת לפני שיעור או טסט"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/beforeLessonNoty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/notyBeforeLessonToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/noty30minuts"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 דקות"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/noty2Hours"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 שעות"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/noty2Days"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="יום אחד"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:orientation="horizontal"/>
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="התראה על פג תוקף תיאוריה"
+                    android:textColor="@color/black"
+                    android:textDirection="rtl"
+                    android:textSize="15dp" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/theoryEndNoty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:orientation="horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveNotySetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:text="שמור שינויים"
+                android:textColor="@color/whiteTextColor"
+                app:cornerRadius="20dp"
+                app:rippleColor="@color/whiteTextColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelNotySettings"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                app:cornerRadius="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="ביטול"
+                android:textColor="@color/colorAccent"
+                app:rippleColor="@color/colorAccent"
+                app:strokeColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

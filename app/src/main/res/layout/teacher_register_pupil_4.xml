@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:gravity="center"
+        android:layoutDirection="rtl">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/final_pupil" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/teacherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="---"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" התווסף למשפחת התלמידים שלך"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="סיום"
+            app:cornerRadius="20dp"
+            android:textColor="@color/whiteTextColor"
+            app:rippleColor="@color/whiteTextColor" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

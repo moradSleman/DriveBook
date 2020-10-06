@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_gravity="center">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:layoutDirection="rtl">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="הזן את הקוד שקיבלת"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            style="@style/PinWidget.PinView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:itemCount="6"
+            app:itemHeight="40dp"
+            app:itemRadius="10dp"
+            app:itemWidth="40dp"
+            app:viewType="rectangle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continuePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="המשך"
+            app:cornerRadius="20dp"
+            android:textColor="@color/whiteTextColor"
+            app:rippleColor="@color/whiteTextColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="לא קיבלת קוד?"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resendCode"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="שלח שוב קוד חד-פעמי"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/colorAccent" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

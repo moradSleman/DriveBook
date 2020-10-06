@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp">
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        style="@style/loginCard"
+        app:cardCornerRadius="@dimen/loginCardRadius"
+        android:elevation="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:layout_marginBottom="@dimen/loginViewsMargin"
+        android:background="@color/whiteCardColor">
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            style="@style/linearParent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="תודה רבה !"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:text="הרישום התבצע בהצלחה"/>
+
+            <com.meg7.widget.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/final_clap" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="נשלח אליך מייל לצורך אימות בשביל שתוכל לכנס לאפליקצייה בפעם הבאה אמת אותו"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reSendMail"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/colorAccent"
+                android:text="לא קיבלתי שלח שוב"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginAfterSucces"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteTextColor"
+                android:layout_marginTop="20dp"
+                android:text="התחבר"
+                app:rippleColor="@color/whiteTextColor"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

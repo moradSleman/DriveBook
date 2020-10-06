@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
+    android:layout_gravity="center"
+    android:background="@drawable/linear_layout_rounded"
+    android:orientation="vertical"
+    android:layoutDirection="rtl">
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_margin="5dp"
+        android:layout_gravity="left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/xit"/>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שים לב !"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="בפעולה זו אתה הולך למחוק"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/lessonNum"
+            android:text="--"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="שיעורים שהשתבץ אליהם תלמידים"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:text="נא לסמן את השיעורים שאותם אתה רוצה להשאיר"/>
+
+    <CheckBox
+        android:id="@+id/removeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="כולם"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timesList"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/removeCCheckAndUpdate"
+            android:layout_margin="10dp"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:background="@drawable/login_button_bk"
+            android:layout_gravity="center_horizontal"
+        android:text="שמור"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginTop="10dp"
+            android:id="@+id/editTextFirstPupil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:maxLines="1" />
+        <ListView
+            android:id="@+id/list_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginTop="10dp"
+            android:id="@+id/editTextSecondPupil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:maxLines="1" />
+        <ListView
+            android:id="@+id/list_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+<androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/isInternalCheck"
+    android:layoutDirection="rtl"
+    android:layout_marginTop="5dp"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="טסט פנימי"></androidx.appcompat.widget.AppCompatCheckBox>
+
+    <TextView
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="תאריך מבחן"
+    android:textStyle="bold"
+    android:textSize="20sp"/>
+
+    <DatePicker
+        android:id="@+id/testDate"
+        style="@style/MyDatePickerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:theme="@style/MyDatePickerSpinnerStyle" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="זמן התחלה"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TimePicker
+        android:id="@+id/testStartime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:timePickerMode="spinner"></TimePicker>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="זמן סיום"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TimePicker
+        android:id="@+id/testEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:timePickerMode="spinner"></TimePicker>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/login_button_bk"
+            android:text="ביטול"
+            android:textColor="@color/whiteTextColor"
+            android:textStyle="bold" />
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/saveTest"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:background="@drawable/login_button_bk"
+        android:text="שמור"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

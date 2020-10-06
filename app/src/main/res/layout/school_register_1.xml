@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/loginCardRadius"
+        android:elevation="5dp"
+          app:cardBackgroundColor="@android:color/white"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            style="@style/linearParent"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="בואו נתחיל"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/final_school" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="פרטי בית ספר"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNameSchool"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:theme="@style/TextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNameSchool"
+                    style="@style/modifiedEditText"
+                    android:hint="שם בית ספר"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLocation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/signup_text_margin_top"
+                android:theme="@style/TextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextLocation"
+                    style="@style/modifiedEditText"
+                    android:hint="כתובת"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="ניתן לעדכן או להוסיף פרטים לאחר התחברות"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="המשך"
+                app:cornerRadius="20dp"
+                android:textColor="@color/whiteTextColor"
+                app:rippleColor="@color/whiteTextColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/haveAccountSign"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:cornerRadius="20dp"
+                android:text="כבר קיים התחבר"
+                android:textColor="@color/colorAccent"
+                app:rippleColor="@color/colorAccent"
+                app:strokeColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/half_circle"
+        android:layoutDirection="rtl">
+
+        <RelativeLayout
+            android:id="@+id/setingMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/settingInfo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/final_setting"></ImageButton>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_alignParentLeft="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/notifications"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/notifications_p_w"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numNoty"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/red_circle"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingTop="1dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="1dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/notifications"
+        app:layout_constraintTop_toTopOf="@id/notifications" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/setingMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <TextView
+          android:id="@+id/title"
+          android:text="צהריים טובים"
+          android:textSize="16sp"
+          android:layout_centerHorizontal="true"
+          android:layout_above="@+id/pupilImage"
+          android:textColor="@color/black"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"></TextView>
+
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/pupilImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/blue_profile" />
+
+        <TextView
+            android:id="@+id/pupilName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pupilImage"
+            android:layout_centerHorizontal="true"
+            android:text="סולימאן"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/pupilHomeTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:tabTextColor="@color/whiteTextColor"
+            app:tabIndicatorColor="@color/whiteTextColor"
+            android:layoutDirection="rtl">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="תשלומים"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="טסטים"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="שיעורים"/>
+        </com.google.android.material.tabs.TabLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/lessonLayout"
+        layout="@layout/pupil_lesson_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/paymentLayout"
+            android:visibility="gone"
+            layout="@layout/pupil_payment_layout"/>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/testLayout"
+            android:visibility="gone"
+            layout="@layout/pupil_test_layout"/>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="@dimen/loginViewsMargin">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/f0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="בחר בית ספר:"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:textDirection="rtl"
+            android:textSize="22sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_toLeftOf="@+id/f0"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/drivingSchool"
+            android:layout_width="match_parent"
+            android:background="@color/whiteTextColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_height="wrap_content"
+            android:hint="בחר בית ספר">
+
+            <AutoCompleteTextView
+                android:maxLines="1"
+                android:id="@+id/drivingScoolSpinnerTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="תאריך"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/dateLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateEditText"
+                android:focusableInTouchMode="false"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_alignParentStart="true"
+        android:text="טסט פנימי"/>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchInternalTest"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="שעת התחלה"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/timeStartLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/timeStartEditTextTest"
+                android:focusableInTouchMode="false"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="שעת סיום"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/timeEndLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/timeEndEditTextTest"
+                android:focusableInTouchMode="false"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:id="@+id/f1"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="נבחן 1"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item"
+            android:layout_toLeftOf="@id/f1"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/whiteTextColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:hint="בחר תלמיד">
+
+            <AutoCompleteTextView
+
+                android:id="@+id/autoCompletetester1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:id="@+id/f2"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="נבחן 2"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/f2"
+            android:layout_marginBottom="10dp"
+            android:background="@color/whiteTextColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:hint="בחר תלמיד">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompletetester2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveTest"
+        android:onClick="checkInsertedData"
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:cornerRadius="20dp"
+        android:textColor="@color/whiteTextColor"
+        android:layout_marginTop="50dp"
+        android:text="שמור"
+        app:rippleColor="@color/whiteTextColor"
+        android:layout_gravity="center_horizontal" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelTest"
+        android:layout_width="200dp"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/colorAccent"
+        app:rippleColor="@color/colorAccent"
+        android:text="ביטול"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

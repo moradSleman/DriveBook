@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin">
+
+    <LinearLayout
+        android:id="@+id/school_settings"
+        android:layoutDirection="rtl"
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+        <RelativeLayout
+            android:id="@+id/R1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="הגדרות חשבון"/>
+
+            <ImageView
+                android:id="@+id/backkk"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/leftarrow" />
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/privateSetting"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="@dimen/loginCardRadius"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/final_user" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_toLeftOf="@+id/image1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:layout_marginRight="7dp"
+                android:layout_weight="1"
+                android:text="מידע אישי"/>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/leftarrow"/>
+        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/privaceSetting"
+            app:cardCornerRadius="@dimen/loginCardRadius"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/final_privacy" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_toLeftOf="@+id/image2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:text="אבטחה והתחברות"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/leftarrow"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/notificationSetting"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="@dimen/loginCardRadius"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/final_bell_noty" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_toLeftOf="@+id/image3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:text="התראות"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/leftarrow"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <include
+        android:visibility="gone"
+        android:id="@+id/school_settings_1"
+        layout="@layout/school_settings_1"/>
+    <include
+
+        android:visibility="gone"
+        android:id="@+id/school_settings_2"
+        layout="@layout/school_settings_2"/>
+    <include
+        android:visibility="gone"
+        android:id="@+id/school_settings_3"
+        layout="@layout/school_settings_3"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:background="@drawable/linear_layout_rounded"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layoutDirection="rtl">
+        <ImageButton
+            android:id="@+id/exit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/xit" />
+
+        <TextView
+            android:id="@+id/facePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="תשלום"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/paymentDate"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="התקבל עדכון על תשלום שנמסר למורה שלך נא לרשום את התשלום ששולם לצורך האימות ושמירת הנתון בהיסטוריית תשלומים"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/totalPay"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_text_view"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_below="@id/totalPay"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/payInsertAnswer"
+            android:textColor="@color/red_btn_bg_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/totalPay"
+            android:background="@drawable/final_shekel" />
+    </RelativeLayout>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/save"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/orange_circular_button"
+        android:text="שמור"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold" />
+</LinearLayout>

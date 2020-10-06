@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        style="@style/parent">
+        <RelativeLayout
+            style="@style/parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/login_shape_bk"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/logoapp"
+                    android:contentDescription="login background" />
+            </LinearLayout>
+        </LinearLayout>
+            <include
+                android:visibility="gone"
+                android:id="@+id/loginByPhone"
+                layout="@layout/login_by_phone"/>
+            <include
+                android:visibility="gone"
+                android:id="@+id/verifyCode"
+                layout="@layout/logi_vis_phone_code_verify"/>
+        <LinearLayout
+            android:id="@+id/loginByMail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/whiteCardColor"
+                android:elevation="5dp"
+                app:cardCornerRadius="@dimen/loginCardRadius">
+                <LinearLayout
+                    android:textDirection="rtl"
+                    style="@style/linearParent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/loginViewsMargin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ברוכים הבאים ל "
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="drivebook"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textDirection="rtl"
+                        android:textAlignment="center"
+                        android:text="חסכון בזמן נוחות מרבית ושקיפות מלאה בכל תהליך הלמידה שלכם"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputEmail"
+                        android:layout_width="match_parent"
+                        android:theme="@style/TextInputLayoutStyle"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_height="wrap_content"
+                        android:hint="אימייל"
+                        android:layout_marginTop="30dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextEmail"
+                            style="@style/modifiedEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:textDirection="rtl"
+                        android:id="@+id/textInputPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextInputLayoutStyle"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/modifiedEditText"
+                            android:id="@+id/editTextPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="סיסמה"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/forgotPassTxt"
+                        style="@style/viewParent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="שכחתי סיסמה"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/newsMoreTextSize" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cirLoginButton"
+                        android:onClick="checkInsertedData"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:cornerRadius="20dp"
+                        android:textColor="@color/whiteTextColor"
+                        android:layout_marginTop="20dp"
+                        android:text="התחבר"
+                        app:rippleColor="@color/whiteTextColor"
+                        android:layout_gravity="center_horizontal" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/signUpSchool"
+                        android:layout_width="match_parent"
+                        app:cornerRadius="20dp"
+                        app:strokeColor="@color/colorAccent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textColor="@color/colorAccent"
+                        app:rippleColor="@color/colorAccent"
+                        android:text="צור חשבון בית ספר חדש"
+                        android:layout_gravity="center_horizontal"/>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_weight="2"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:background="@color/black"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:text="או התחבר באמצעות"/>
+                        <LinearLayout
+                            android:layout_weight="2"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:backgroundTint="@color/black"
+                            android:layout_height="2dp"
+                            android:background="@color/black"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/vvPhone"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/final_phone_blue" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

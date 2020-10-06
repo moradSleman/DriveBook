@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/pupils"
+            android:icon="@drawable/ic_teachers"
+            android:title="תלמידים" />
+        <item
+            android:id="@+id/addPupil"
+            android:icon="@drawable/ic_add_teacher"
+            android:title="הוספת תלמיד" />
+        <item
+            android:id="@+id/calendar"
+            android:icon="@drawable/ic_calendar"
+            android:title="זמני שיעורים" />
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/ic_timer"
+            android:title="התראות" />
+    </group>
+
+    <item android:title="פרטים">
+        <menu>
+            <item
+                android:id="@+id/teacherSettings"
+                android:icon="@drawable/ic_update_info"
+                android:title="הגדרות" />
+            <item
+                android:id="@+id/exit"
+                android:icon="@drawable/ic_exit"
+                android:title="יציאה" />
+
+
+
+        </menu>
+    </item>
+
+</menu>

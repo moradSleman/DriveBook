@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:background="@drawable/linear_layout_rounded"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layoutDirection="rtl">
+        <ImageButton
+            android:id="@+id/exit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/xit" />
+        <ImageView
+            android:id="@+id/facePhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logoapp"/>
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/pupilName"
+            android:layout_below="@id/facePhoto"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="----"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/todayDate"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="----"
+            android:textSize="18sp"/>
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/todayTime"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="----"
+            android:textSize="18sp"/>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/totalPay"
+                android:padding="10dp"
+                android:layout_width="120dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_text_view"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/totalPay"
+                android:background="@drawable/final_shekel" />
+        </RelativeLayout>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/save"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/orange_circular_button"
+        android:text="שמור"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold" />
+</LinearLayout>

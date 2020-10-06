@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <ImageButton
+        android:id="@+id/backTohome"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="left"
+        android:background="@drawable/leftarrow" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/whiteTextColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:hint="בחר בית ספר">
+
+        <AutoCompleteTextView
+            android:elevation="5dp"
+            android:maxLines="1"
+            android:id="@+id/filled_exposed_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkMsgToAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="שליחה לכל התלמידים"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/whiteCardColor"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp">
+
+        <SearchView
+            android:layoutDirection="rtl"
+            android:queryHint="אל"
+            android:iconifiedByDefault="false"
+            android:id="@+id/searchPupil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+    <ListView
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/whiteTextColor"
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/whiteCardColor"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp">
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/notyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="נושא"
+            android:padding="10dp"
+            android:textColorHint="@color/black" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/whiteCardColor"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp">
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/notyContent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="הטקסט של ההודעה"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColorHint="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:background="@drawable/login_button_bk"
+        android:onClick="checkInsertedData"
+        android:text="שלח"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold"
+        app:initialCornerAngle="27dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
+</LinearLayout>
